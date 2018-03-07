@@ -30,8 +30,6 @@ function createWindow() {
       win.loadURL('file://' + __dirname + '/index.html');
     */
 
-
-
     // Emitted when the window is closed.
     mainWindow.on('closed', function() {
         // Dereference the window object, usually you would store windows
@@ -39,6 +37,9 @@ function createWindow() {
         // when you should delete the corresponding element.
         mainWindow = null
     })
+
+    // Open the DevTools.
+    win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -65,4 +66,3 @@ app.on('activate', function() {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
